@@ -1,0 +1,383 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+.refreshButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.refreshButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.refreshButton svg {
+    font-size: 1.2rem;
+}
+
+.loadingContainer {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.loadingContainer p {
+    margin-top: 1rem;
+}
+
+.errorContainer {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.errorText {
+    font-size: 1.2rem;
+    color: #d32f2f;
+}
+
+.retryButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retryButton:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}
+
+.noTrains {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.trainGrid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 1rem;
+    overflow: auto;
+}
+
+.trainCard {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.trainCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.trainHeader h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
+}
+
+.trainNumber {
+    font-size: 0.9rem;
+    color: #d83300;
+    margin: 0;
+}
+
+.seatBadge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.available {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.almostFull {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.fullBooked {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.trainRoute {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #eaf5ff;
+    border-radius: 8px;
+}
+
+.station {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+}
+
+.stationLabel {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.stationName {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #2196f3;
+    font-weight: 900;
+}
+
+.trainDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin-bottom: 1.5rem;
+}
+
+.detailItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0;
+}
+
+.detailLabel {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.detailValue {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.bookButton {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bookButton:hover:not(:disabled) {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+}
+
+.bookButton:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Booking Form Popup */
+.bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.trainInfoPopup {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #2196f3;
+}
+
+.trainInfoPopup h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.trainInfoPopup p {
+    margin: 0.3rem 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.availableSeats {
+    color: #4caf50 !important;
+    font-weight: 600;
+    margin-top: 0.5rem !important;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.input {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #2196f3;
+}
+
+.fieldHint {
+    font-size: 0.85rem;
+    color: #999;
+    margin: 0;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.success {
+    color: #4caf50;
+    font-size: 1.1rem;
+}
+
+.fail {
+    color: #f44336;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .trainGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .trainRoute {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    .station {
+        width: 100%;
+    }
+}

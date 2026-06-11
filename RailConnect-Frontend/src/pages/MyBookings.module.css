@@ -1,0 +1,465 @@
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.refreshButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.refreshButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.loadingContainer {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.loadingContainer p {
+    margin-top: 1rem;
+}
+
+.errorContainer {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.errorText {
+    font-size: 1.2rem;
+    color: #d32f2f;
+}
+
+.retryButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retryButton:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}
+
+/* Summary Cards */
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.summaryCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2196f3;
+    transition: transform 0.3s ease;
+}
+
+.summaryCard:hover {
+    transform: translateY(-4px);
+}
+
+.summaryCard h3 {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.summaryValue {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.confirmedCard {
+    border-left-color: #4caf50;
+}
+
+.confirmedCard .summaryValue {
+    color: #4caf50;
+}
+
+.waitlistCard {
+    border-left-color: #ff9800;
+}
+
+.waitlistCard .summaryValue {
+    color: #ff9800;
+}
+
+.cancelledCard {
+    border-left-color: #f44336;
+}
+
+.cancelledCard .summaryValue {
+    color: #f44336;
+}
+
+/* Filter Bar */
+.filterBar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.filterButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #f5f5f5;
+    color: #666;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+    background-color: #e0e0e0;
+}
+
+.filterButton.active {
+    background-color: #2196f3;
+    color: white;
+    border-color: #2196f3;
+}
+
+/* Bookings List */
+.bookingsList {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    ); /* Auto-fit columns, min 250px, max 1fr */
+    gap: 1.5rem;
+    height: 100%;
+    overflow: auto;
+}
+
+.bookingCard {
+    background: white;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    height: fit-content;
+}
+
+.bookingCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bookingHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.pnrSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.pnrLabel {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.pnrValue {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 700;
+    font-family: "Courier New", monospace;
+}
+
+.statusBadge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.waitlistStatus {
+    display: flex;
+    gap: 10px;
+}
+
+.waitNumber {
+    background-color: #ffddc2;
+    color: #992900;
+}
+
+.confirmed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.waitlist {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.cancelled {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.bookingBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.trainInfo h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trainNumber {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.bookingDetails {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.8rem; */
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0;
+}
+
+.detailLabel {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.detailValue {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.bookingActions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #f5f5f5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cancelButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancelButton:disabled {
+    background-color: #ffc3be;
+    /* color: black; */
+}
+
+.cancelButton:hover:disabled {
+    background-color: #ffc3be;
+    transform: translateY(0px);
+    box-shadow: none;
+    cursor: not-allowed;
+    /* color: black; */
+}
+
+.cancelButton:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.4);
+}
+
+.noBookings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #666;
+}
+
+.noBookings svg {
+    color: #bdbdbd;
+    margin-bottom: 1rem;
+}
+
+.noBookings p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.clearFilterButton {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clearFilterButton:hover {
+    background-color: #1976d2;
+}
+
+/* Popup Styles */
+.success {
+    color: #4caf50;
+    font-size: 1.1rem;
+}
+
+.fail {
+    color: #f44336;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .summaryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filterBar {
+        gap: 0.5rem;
+    }
+
+    .filterButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .bookingCard {
+        padding: 1rem;
+    }
+
+    .detailRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .bookingActions {
+        justify-content: stretch;
+    }
+
+    .cancelButton {
+        width: 100%;
+    }
+}

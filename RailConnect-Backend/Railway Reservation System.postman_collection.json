@@ -1,0 +1,1437 @@
+{
+    "info": {
+        "_postman_id": "54903758-457a-4324-ab6b-16860265a2ef",
+        "name": "Railway Reservation System",
+        "description": "Working Postman Collection for Railway Reservation Backend",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "49443677",
+        "_collection_link": "https://mayankraj161s-2714011.postman.co/workspace/backend~1daa436d-d3a3-4d88-8156-601a6065accc/collection/49443677-54903758-457a-4324-ab6b-16860265a2ef?action=share&source=collection_link&creator=49443677"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"Mayank\",\n  \"email\": \"mayank@example.com\",\n  \"password\": \"123456\",\n  \"phone\": \"1478523690\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/auth/register",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "auth", "register"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Register",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"name\": \"Mayank\",\n  \"email\": \"mayank@example.com\",\n  \"password\": \"123456\",\n  \"phone\": \"1478523690\"\n}"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/auth/register",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "auth", "register"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": null,
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "42"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"2a-Hvwoi7Lnu/mkw4Noz37OmaS9clU\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 08:46:58 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"User Registered Successfully\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"email\": \"admin@example.com\", \"password\": \"CHANGE_ME\" }"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/auth/login",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "auth", "login"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Login",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \"email\": \"mayank@example.com\", \"password\": \"123456\" }"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/auth/login",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "auth", "login"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": null,
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Set-Cookie",
+                                    "value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzYzMjgzNjk2LCJleHAiOjE3NjM4ODg0OTZ9.1spZZOXN9SPm3HUPkrJ0XoWQs3yGzxvCPMOf_CPBxWM; Max-Age=604800; Path=/; Expires=Sun, 23 Nov 2025 09:01:36 GMT; HttpOnly; SameSite=Lax"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "217"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"d9-+T2gDrAQmCre96UV/Q6Pdv6Cxsc\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 09:01:36 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Logged in\",\n    \"user\": {\n        \"user_id\": 7,\n        \"name\": \"Mayank\",\n        \"email\": \"mayank@example.com\",\n        \"password\": \"$2b$10$8uPk0USSZnkP8dG5lS0vguU2erFCmh1IuUM1R.KAlZ/1w0z/PWvCG\",\n        \"role\": \"user\",\n        \"created_at\": \"2025-11-16T08:46:58.000Z\"\n    }\n}"
+                        },
+                        {
+                            "name": "Login As Admin",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \"email\": \"admin@example.com\", \"password\": \"CHANGE_ME\" }"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/auth/login",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "auth", "login"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": null,
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Set-Cookie",
+                                    "value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYzMjg0MTk1LCJleHAiOjE3NjM4ODg5OTV9.Zd108RZ9c73ARJicl1IVFQcIgd0ihpPwGRz9CbwCPNs; Max-Age=604800; Path=/; Expires=Sun, 23 Nov 2025 09:09:55 GMT; HttpOnly; SameSite=Lax"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "216"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"d8-Rxk7kKhiBaDN0gWLgGLXYmM5dY8\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 09:09:55 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Logged in\",\n    \"user\": {\n        \"user_id\": 1,\n        \"name\": \"Admin\",\n        \"email\": \"admin@example.com\",\n        \"password\": \"$2b$10$0pl/Z3rmnxrO3Jbx6eImpeaStvY2x2O8akf/qYv8H5cCelR5uMZRy\",\n        \"role\": \"admin\",\n        \"created_at\": \"2025-11-16T05:12:44.000Z\"\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/auth/logout",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "auth", "logout"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Logout",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/auth/logout",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "auth", "logout"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": null,
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Set-Cookie",
+                                    "value": "jwt=; Max-Age=0; Path=/; Expires=Sun, 16 Nov 2025 09:02:00 GMT"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "24"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"18-ez3HU6ztP+x97ArcQd0fxpuaOt0\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 09:02:00 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Logged out\"\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "item": [
+                {
+                    "name": "Create Passenger",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"phone\": \"9999999999\" }"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/user/passenger",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "user", "passenger"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Create Passenger",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \"phone\": \"9999999999\" }"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/user/passenger",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "user", "passenger"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "31"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"1f-dQOQ75IG05RlomXBMLufwNLepVQ\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 10:50:04 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Passenger Created\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Profile",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"password\":\"admin\" }"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/user/profile",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "user", "profile"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Update Profile",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \"password\":\"admin\" }"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/user/profile",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "user", "profile"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "29"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"1d-0c9F93718J070Rj2r3+AB/NuUk8\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 10:58:39 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Profile Updated\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Profile",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/user/profile",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "user", "profile"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Profile",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": ""
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/user/profile",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "user", "profile"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": null,
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "153"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"99-CgDESYDGgl0eKQZ+ja54qkjvhfg\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 11:37:48 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"user_id\": 3,\n    \"name\": \"Riya Sharma\",\n    \"email\": \"riya@example.com\",\n    \"role\": \"user\",\n    \"created_at\": \"2025-11-16T05:12:44.000Z\",\n    \"passenger_id\": 2,\n    \"phone\": \"9123456780\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Book Ticket",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"train_no\": 110 }"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/user/book",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "user", "book"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Book Ticket",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \"train_no\": 110 }"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/user/book",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "user", "book"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "26"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"1a-TyJn9ijfSbdWzmeOVN8T2Ev9SdQ\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 11:00:43 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Booking done\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cancel Ticket",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"pnr\": 13 }"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/user/cancel",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "user", "cancel"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Cancel Ticket",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \"pnr\": 13 }"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/user/cancel",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "user", "cancel"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "31"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"1f-QesMqoF1hSe3HrfCO1fyWXrNyts\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 11:03:17 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Booking cancelled\"\n}"
+                        },
+                        {
+                            "name": "Already Cancelled Ticket",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \"pnr\": 10 }"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/user/cancel",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "user", "cancel"]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": null,
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "51"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"33-PVo6UTMn8Ysg6XM9vzkhWse3D5w\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 11:23:54 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"status\": \"fail\",\n    \"message\": \"PNR already cancelled\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "My Bookings",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/user/bookings",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "user", "bookings"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "My Bookings",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/user/bookings",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "user", "bookings"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "292"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"124-tKmdOcAeIdzyGdehNMJeFKtkUOY\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 11:04:21 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "[\n    {\n        \"pnr\": 13,\n        \"passenger_id\": 7,\n        \"train_no\": 110,\n        \"status\": \"CANCELLED\",\n        \"booking_time\": \"2025-11-16T11:00:20.000Z\",\n        \"train_name\": \"Sampoorna Kranti Express\"\n    },\n    {\n        \"pnr\": 14,\n        \"passenger_id\": 7,\n        \"train_no\": 110,\n        \"status\": \"WAITLIST\",\n        \"booking_time\": \"2025-11-16T11:00:43.000Z\",\n        \"train_name\": \"Sampoorna Kranti Express\"\n    }\n]"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booking Summary",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/user/summary",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "user", "summary"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Booking Summary",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/user/summary",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "user", "summary"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"3a-ui9G3JYLr6KOuXpMU1NIB//EJNQ\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 11:04:38 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"total\": 2,\n    \"confirmed\": \"0\",\n    \"waitlist\": \"1\",\n    \"cancelled\": \"1\"\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Admin",
+            "item": [
+                {
+                    "name": "Create Train",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"train_no\": 150,\n  \"name\": \"Marwar SF Express\",\n  \"start_station\": \"Hazrat Nizamuddin\",\n  \"end_station\": \"Udaipur City\",\n  \"journey_days\": 1,\n  \"total_seats\": 75\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/admin/train",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "admin", "train"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Create Train",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"train_no\": 150,\n  \"name\": \"Marwar SF Express\",\n  \"start_station\": \"Hazrat Nizamuddin\",\n  \"end_station\": \"Udaipur City\",\n  \"journey_days\": 1,\n  \"total_seats\": 75\n}"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/admin/train",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "admin", "train"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": null,
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "25"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"19-uMtnai6zDvFdJk2Vp8SX9TlTPfM\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 09:11:42 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Train Added\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Train",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"total_seats\": 10 }"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/admin/train/150",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "admin", "train", "150"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Update Train",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \"total_seats\": 10 }"
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/api/admin/train/150",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "admin", "train", "150"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": null,
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "27"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"1b-9NQa03OpSfHUZbBEaUYQkPIil4Q\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 10:25:41 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Train Updated\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Train",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/admin/train/150",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "admin", "train", "150"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Delete Train",
+                            "originalRequest": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/admin/train/150",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "admin", "train", "150"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "27"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"1b-zTVmmxu/QVwcyVEFndUONEWEzZ4\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 10:34:20 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Train Deleted\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Train Details",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/admin/train/110",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "admin", "train", "110"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Statistics",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/admin/statistics",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["api", "admin", "statistics"]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Statistics",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/admin/statistics",
+                                    "protocol": "http",
+                                    "host": ["localhost"],
+                                    "port": "3000",
+                                    "path": ["api", "admin", "statistics"]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "http://localhost:5173"
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Origin"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Credentials",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "606"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"25e-uvF9RMpLI/BnMDckmmFX6mixIIE\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Sun, 16 Nov 2025 10:35:33 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "[\n    {\n        \"train_no\": 101,\n        \"name\": \"Intercity Express\",\n        \"total_seats\": 100,\n        \"available_seats\": 98,\n        \"total_bookings\": 2,\n        \"confirmed\": \"2\",\n        \"waitlist\": \"0\",\n        \"cancelled\": \"0\"\n    },\n    {\n        \"train_no\": 102,\n        \"name\": \"Rajdhani Express\",\n        \"total_seats\": 120,\n        \"available_seats\": 120,\n        \"total_bookings\": 0,\n        \"confirmed\": null,\n        \"waitlist\": null,\n        \"cancelled\": null\n    },\n    {\n        \"train_no\": 103,\n        \"name\": \"Shatabdi Express\",\n        \"total_seats\": 80,\n        \"available_seats\": 80,\n        \"total_bookings\": 0,\n        \"confirmed\": null,\n        \"waitlist\": null,\n        \"cancelled\": null\n    },\n    {\n        \"train_no\": 110,\n        \"name\": \"Sampoorna Kranti Express\",\n        \"total_seats\": 5,\n        \"available_seats\": 0,\n        \"total_bookings\": 10,\n        \"confirmed\": \"5\",\n        \"waitlist\": \"1\",\n        \"cancelled\": \"4\"\n    }\n]"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
